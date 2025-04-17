@@ -59,14 +59,12 @@ class _GameScreenState extends State<GameScreen> {
                               viewModel.selectedShot, widget.gameDetail),
                       child: Row(
                         children: [
-                          widget.isNewGame
-                              ? const Icon(Icons.play_arrow_rounded,
-                                  color: Colors.white)
-                              : Image.asset('images/bang-black.png',
-                                  color: Colors.white, height: 25),
+                          if (!widget.isNewGame)
+                            Image.asset('images/bang-black.png',
+                                color: Colors.white, height: 25),
                           const SizedBox(width: 3),
                           Text(
-                            widget.isNewGame ? "Play" : "Shoot",
+                            widget.isNewGame ? "Submit" : "Shoot",
                             style: const TextStyle(color: Colors.white),
                           )
                         ],

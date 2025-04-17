@@ -19,6 +19,10 @@ class DialogHelper {
                   ListTile(
                     title: const Text("Perfect"),
                     onTap: () => Navigator.pop(context, "Perfect"),
+                  ),
+                  ListTile(
+                    title: const Text("One Ship (A1)"),
+                    onTap: () => Navigator.pop(context, "OneShip"),
                   )
                 ]),
           ));
@@ -48,9 +52,12 @@ class DialogHelper {
           content: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox.square(dimension: 25, child: CircularProgressIndicator.adaptive(strokeWidth: 3)),
+              SizedBox.square(
+                  dimension: 25,
+                  child: CircularProgressIndicator.adaptive(strokeWidth: 3)),
               SizedBox(width: 10),
-              Flexible(child: Text("Please wait...", style: TextStyle(fontSize: 16)))
+              Flexible(
+                  child: Text("Please wait...", style: TextStyle(fontSize: 16)))
             ],
           ),
         ),
